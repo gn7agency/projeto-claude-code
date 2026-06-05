@@ -22,7 +22,7 @@
           {
             "type": "command",
             "shell": "powershell",
-            "command": "$src = 'C:\\Users\\gabri\\.claude\\projects\\C--Users-gabri-OneDrive--rea-de-Trabalho-PROJETO-DO-CLAUDE-CODE\\memory'; $dst = 'C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\Cérebro cloud\\Memórias Claude'; if (Test-Path $src) { robocopy $src $dst /E /XO /NJH /NJS /NFL /NDL | Out-Null }",
+            "command": "$src = 'C:\\Users\\gabri\\.claude\\projects\\C--Users-gabri-OneDrive--rea-de-Trabalho-PROJETO-DO-CLAUDE-CODE\\memory'; $dst = 'C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\Cérebro cloud\\Cérebro Claude\\Memórias Claude'; if (Test-Path $src) { robocopy $src $dst /E /XO /NJH /NJS /NFL /NDL | Out-Null }",
             "timeout": 15,
             "statusMessage": "Sincronizando memórias com Obsidian..."
           }
