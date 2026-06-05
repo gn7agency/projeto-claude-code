@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git *)",
+      "Bash(gh *)",
+      "PowerShell(git *)",
+      "PowerShell(gh *)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "$proj = 'c:\\Users\\gabri\\OneDrive\\Área de Trabalho\\PROJETO DO CLAUDE CODE'; Push-Location $proj; $status = git status --porcelain 2>&1; if ($status) { git add -A; $ts = Get-Date -Format 'yyyy-MM-dd HH:mm:ss'; git commit -m \"Auto-update: $ts\"; git push }; Pop-Location",
+            "timeout": 30,
+            "statusMessage": "Sincronizando com GitHub..."
+          }
+        ]
+      }
+    ]
+  }
+}
