@@ -18,6 +18,13 @@
             "command": "$proj = 'c:\\Users\\gabri\\OneDrive\\Área de Trabalho\\PROJETO DO CLAUDE CODE'; Push-Location $proj; $status = git status --porcelain 2>&1; if ($status) { git add -A; $ts = Get-Date -Format 'yyyy-MM-dd HH:mm:ss'; git commit -m \"Auto-update: $ts\"; git push }; Pop-Location",
             "timeout": 30,
             "statusMessage": "Sincronizando com GitHub..."
+          },
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "$src = 'C:\\Users\\gabri\\.claude\\projects\\C--Users-gabri-OneDrive--rea-de-Trabalho-PROJETO-DO-CLAUDE-CODE\\memory'; $dst = 'C:\\Users\\gabri\\OneDrive\\Área de Trabalho\\Cérebro cloud\\Memórias Claude'; if (Test-Path $src) { robocopy $src $dst /E /XO /NJH /NJS /NFL /NDL | Out-Null }",
+            "timeout": 15,
+            "statusMessage": "Sincronizando memórias com Obsidian..."
           }
         ]
       }
