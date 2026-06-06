@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prime Dental Concept — Odontologia premium para transformar seu sorriso com tecnologia, estética e segurança.">
+  <title>Prime Dental Concept — Odontologia Premium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== PRELOADER ===== -->
+<div id="preloader">
+  <div class="preloader-content">
+    <div class="preloader-tooth">
+      <svg viewBox="0 0 80 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 6C25 6 12 16 12 31C12 37 14 43 17 49C21 58 24 67 26 76C28 84 30 90 33 90C36 90 37 82 38 74C38.5 70 39 66 40 66C41 66 41.5 70 42 74C43 82 44 90 47 90C50 90 52 84 54 76C56 67 59 58 63 49C66 43 68 37 68 31C68 16 55 6 40 6Z" fill="url(#toothGrad)"/>
+        <ellipse cx="30" cy="22" rx="7" ry="4.5" fill="rgba(255,255,255,0.22)" transform="rotate(-25 30 22)"/>
+        <defs>
+          <linearGradient id="toothGrad" x1="12" y1="6" x2="68" y2="90" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#A7F3FF"/>
+            <stop offset="45%" stop-color="#38BDF8"/>
+            <stop offset="100%" stop-color="#0B2E63"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="tooth-glow"></div>
+    </div>
+    <div class="preloader-brand">
+      <span class="brand-prime">Prime</span>
+      <span class="brand-name">Dental Concept</span>
+    </div>
+    <div class="preloader-bar-track">
+      <div class="preloader-bar-fill"></div>
+    </div>
+    <p class="preloader-sub">Carregando experiência premium...</p>
+  </div>
+</div>
+
+<!-- ===== SCROLL PROGRESS ===== -->
+<div id="scrollProgress"></div>
+
+<!-- ===== HEADER ===== -->
+<header id="header" class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#hero" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 36 42" fill="none">
+            <path d="M18 2C11 2 5 7 5 14C5 17 6 20 8 23C10 27 12 31 13 35C14 38 15 41 16.5 41C18 41 18.5 37 19 33C19.2 31 19.5 29 18 29... M18 2C25 2 31 7 31 14C31 17 30 20 28 23C26 27 24 31 23 35C22 38 21 41 19.5 41Z" fill="url(#logoGrad)"/>
+            <path d="M18 2C11 2 5 7 5 14C5 17 6 20 8 23C10 27 12 31 13 35C14 38 15 41 16.5 41C18 41 18.5 37 19 33C19.3 31 19.5 29 18 29C16.5 29 16.7 31 17 33C17.5 37 18 41 19.5 41C21 41 22 38 23 35C24 31 26 27 28 23C30 20 31 17 31 14C31 7 25 2 18 2Z" fill="url(#logoGrad)"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="5" y1="2" x2="31" y2="41" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#A7F3FF"/>
+                <stop offset="100%" stop-color="#38BDF8"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-prime">Prime</span>
+          <span class="logo-dental">Dental Concept</span>
+        </div>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#tratamentos" class="nav-link">Tratamentos</a></li>
+          <li><a href="#tecnologia" class="nav-link">Tecnologia</a></li>
+          <li><a href="#resultados" class="nav-link">Resultados</a></li>
+          <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+          <li><a href="#duvidas" class="nav-link">Dúvidas</a></li>
+          <li><a href="#midia" class="nav-link">Na mídia</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="#turismo" class="nav-link">Dental Turismo</a></li>
+        </ul>
+      </nav>
+
+      <a href="#agendamento" class="btn btn-primary header-cta">Agendar avaliação</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section id="hero" class="hero">
+  <canvas id="particleCanvas"></canvas>
+  <div class="hero-shapes">
+    <div class="hs hs-1"></div>
+    <div class="hs hs-2"></div>
+    <div class="hs hs-3"></div>
+    <div class="hs hs-4"></div>
+  </div>
+
+  <div class="container hero-container">
+    <div class="hero-content" data-parallax="0.04">
+      <div class="hero-badges">
+        <span class="badge"><i class="fas fa-cube"></i> Planejamento digital 3D</span>
+        <span class="badge"><i class="fas fa-heart"></i> Atendimento humanizado</span>
+        <span class="badge"><i class="fas fa-star"></i> Especialistas em estética dental</span>
+      </div>
+      <h1 class="hero-title">
+        Odontologia premium para <span class="highlight-text">transformar seu sorriso</span> com tecnologia, estética e segurança.
+      </h1>
+      <p class="hero-sub">
+        Na Prime Dental Concept, unimos planejamento digital, atendimento humanizado e especialistas em estética dental para entregar tratamentos personalizados do diagnóstico ao sorriso final.
+      </p>
+      <div class="hero-actions">
+        <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20na%20Prime%20Dental%20Concept." target="_blank" class="btn btn-whatsapp btn-lg">
+          <i class="fab fa-whatsapp"></i> Agendar via WhatsApp
+        </a>
+        <a href="#tratamentos" class="btn btn-outline-white btn-lg">
+          Conhecer tratamentos <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <div class="metric-icon"><i class="fas fa-users"></i></div>
+          <div class="metric-info">
+            <strong>+3.000</strong>
+            <span>Pacientes atendidos</span>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon"><i class="fas fa-award"></i></div>
+          <div class="metric-info">
+            <strong>15 anos</strong>
+            <span>De experiência</span>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon"><i class="fas fa-user-md"></i></div>
+          <div class="metric-info">
+            <strong>+12</strong>
+            <span>Especialistas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" data-parallax="0.07">
+      <div class="hero-img-frame">
+        <img src="https://images.unsplash.com/photo-1606208701566-3f3a5a6b0439?auto=format&fit=crop&w=780&q=90"
+             alt="Sorriso perfeito — Prime Dental Concept" class="hero-img">
+        <div class="hero-img-glow"></div>
+        <div class="hero-img-ring"></div>
+      </div>
+
+      <div class="hero-float tooth-float">
+        <svg viewBox="0 0 60 72" fill="none">
+          <path d="M30 4C19 4 9 11 9 23C9 28 11 33 13 38C16 45 18 52 20 58C21 63 22 68 24.5 68C27 68 27.5 62 28 56C28.3 53 28.6 50 30 50C31.4 50 31.7 53 32 56C32.5 62 33 68 35.5 68C38 68 39 63 40 58C42 52 44 45 47 38C49 33 51 28 51 23C51 11 41 4 30 4Z" fill="url(#fth)"/>
+          <ellipse cx="22" cy="16" rx="5" ry="3" fill="rgba(255,255,255,0.2)" transform="rotate(-20 22 16)"/>
+          <defs>
+            <linearGradient id="fth" x1="9" y1="4" x2="51" y2="68" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="rgba(167,243,255,0.9)"/>
+              <stop offset="100%" stop-color="rgba(56,189,248,0.7)"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="scan-rings">
+        <div class="sr sr-1"></div>
+        <div class="sr sr-2"></div>
+        <div class="sr sr-3"></div>
+      </div>
+
+      <div class="hero-float-card hfc-1">
+        <div class="hfc-icon"><i class="fas fa-cube"></i></div>
+        <div class="hfc-text"><strong>Planejamento 3D</strong><span>Diagnóstico digital</span></div>
+      </div>
+      <div class="hero-float-card hfc-2">
+        <div class="hfc-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="hfc-text"><strong>Clínica Referência</strong><span>Estética dental</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint">
+    <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+    <span>Rolar</span>
+  </div>
+</section>
+
+<!-- ===== MAIN CARDS ===== -->
+<section class="main-cards">
+  <div class="container">
+    <div class="mc-grid">
+
+      <div class="mc-card reveal" style="--rd:0s">
+        <div class="mc-img">
+          <img src="https://images.unsplash.com/photo-1588776813677-77aaa5e65e18?auto=format&fit=crop&w=760&q=80" alt="Tratamentos Dentários" loading="lazy">
+          <div class="mc-overlay"></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-icon"><i class="fas fa-tooth"></i></div>
+          <h3>Tratamentos Dentários</h3>
+          <p>Soluções completas para saúde, estética e reabilitação oral em um único lugar.</p>
+          <a href="#tratamentos" class="btn btn-glass">Saiba mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="mc-card reveal" style="--rd:0.12s">
+        <div class="mc-img">
+          <img src="https://images.unsplash.com/photo-1629909615957-ccf3a3e72e0b?auto=format&fit=crop&w=760&q=80" alt="Perca o medo de dentista" loading="lazy">
+          <div class="mc-overlay"></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-icon"><i class="fas fa-heart"></i></div>
+          <h3>Perca o Medo de Dentista</h3>
+          <p>Atendimento acolhedor, tecnologia e protocolos pensados para quem busca conforto.</p>
+          <a href="#sobre" class="btn btn-glass">Conheça nossa abordagem <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="mc-card reveal" style="--rd:0.24s">
+        <div class="mc-img">
+          <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3c95?auto=format&fit=crop&w=760&q=80" alt="Lentes e Estética Dental" loading="lazy">
+          <div class="mc-overlay"></div>
+        </div>
+        <div class="mc-body">
+          <div class="mc-icon"><i class="fas fa-magic"></i></div>
+          <h3>Lentes e Estética Dental</h3>
+          <p>Planejamento estético personalizado para transformar o sorriso com naturalidade.</p>
+          <a href="#resultados" class="btn btn-glass">Ver possibilidades <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUEM SOMOS ===== -->
+<section id="sobre" class="about section-pad">
+  <div class="about-bg-blob"></div>
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-images reveal">
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=700&q=85" alt="Clínica Prime Dental Concept" loading="lazy">
+        </div>
+        <div class="about-img-sec">
+          <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=400&q=85" alt="Atendimento premium" loading="lazy">
+        </div>
+        <div class="about-badge-exp">
+          <span class="exp-num">15</span>
+          <span class="exp-lbl">Anos de<br>Excelência</span>
+        </div>
+      </div>
+
+      <div class="about-content reveal">
+        <div class="section-label">Quem Somos</div>
+        <h2>Uma clínica criada para quem busca <span class="gradient-text">confiança, estética e tecnologia</span>.</h2>
+        <p class="about-lead">A Prime Dental Concept nasceu para oferecer uma experiência odontológica completa, com atendimento humanizado, profissionais especializados e tecnologia digital aplicada em cada etapa do tratamento.</p>
+        <div class="differentials">
+          <div class="diff-item reveal" style="--rd:0s"><div class="diff-icon"><i class="fas fa-heart"></i></div><span>Atendimento humanizado</span></div>
+          <div class="diff-item reveal" style="--rd:0.07s"><div class="diff-icon"><i class="fas fa-laptop-medical"></i></div><span>Diagnóstico digital</span></div>
+          <div class="diff-item reveal" style="--rd:0.14s"><div class="diff-icon"><i class="fas fa-paint-brush"></i></div><span>Planejamento estético</span></div>
+          <div class="diff-item reveal" style="--rd:0.21s"><div class="diff-icon"><i class="fas fa-users"></i></div><span>Equipe multidisciplinar</span></div>
+          <div class="diff-item reveal" style="--rd:0.28s"><div class="diff-icon"><i class="fas fa-gem"></i></div><span>Ambiente premium</span></div>
+          <div class="diff-item reveal" style="--rd:0.35s"><div class="diff-icon"><i class="fas fa-user-check"></i></div><span>Tratamentos personalizados</span></div>
+        </div>
+        <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20falar%20com%20a%20equipe%20da%20Prime%20Dental%20Concept." target="_blank" class="btn btn-primary">
+          <i class="fab fa-whatsapp"></i> Falar com a equipe
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROPÓSITO ===== -->
+<section class="purpose section-pad bg-offwhite">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Nosso Propósito</div>
+      <h2>Cuidar do seu sorriso com <span class="gradient-text">precisão, conforto e resultado</span>.</h2>
+      <p>Acreditamos que saúde bucal vai além de tratar dentes. Nosso compromisso é devolver segurança, autoestima e qualidade de vida por meio de uma odontologia moderna, ética e personalizada.</p>
+    </div>
+    <div class="purpose-grid">
+      <div class="purpose-card reveal" style="--rd:0s"><div class="pc-icon"><i class="fas fa-shield-alt"></i></div><h4>Segurança</h4><p>Protocolos rigorosos de esterilização e biossegurança em todos os procedimentos.</p></div>
+      <div class="purpose-card reveal" style="--rd:0.08s"><div class="pc-icon"><i class="fas fa-hand-holding-heart"></i></div><h4>Conforto</h4><p>Ambiente acolhedor e técnicas modernas que minimizam o desconforto durante o tratamento.</p></div>
+      <div class="purpose-card reveal" style="--rd:0.16s"><div class="pc-icon"><i class="fas fa-star"></i></div><h4>Estética</h4><p>Resultados naturais e sofisticados, planejados com tecnologia digital para cada rosto.</p></div>
+      <div class="purpose-card reveal" style="--rd:0.24s"><div class="pc-icon"><i class="fas fa-microchip"></i></div><h4>Tecnologia</h4><p>Equipamentos de última geração para diagnósticos precisos e tratamentos mais previsíveis.</p></div>
+      <div class="purpose-card reveal" style="--rd:0.32s"><div class="pc-icon"><i class="fas fa-infinity"></i></div><h4>Durabilidade</h4><p>Materiais de alta performance e técnicas avançadas para resultados que duram.</p></div>
+      <div class="purpose-card reveal" style="--rd:0.40s"><div class="pc-icon"><i class="fas fa-handshake"></i></div><h4>Confiança</h4><p>Transparência em cada etapa do tratamento, do diagnóstico ao resultado final.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EQUIPE ===== -->
+<section class="team section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Nossa Equipe</div>
+      <h2>Especialistas preparados para <span class="gradient-text">cada etapa</span> do seu tratamento.</h2>
+    </div>
+    <div class="team-grid">
+
+      <div class="team-card reveal" style="--rd:0s">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=85&faces=true" alt="Dra. Marina Almeida" loading="lazy">
+          <div class="team-overlay">
+            <p>Especialista em implantes e reabilitação oral com mais de 10 anos dedicados à odontologia de alta complexidade.</p>
+            <a href="#agendamento" class="btn btn-sm btn-outline-white">Agendar consulta</a>
+          </div>
+        </div>
+        <div class="team-info">
+          <h4>Dra. Marina Almeida</h4>
+          <span class="team-spec">Implantodontia e Reabilitação Oral</span>
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card reveal" style="--rd:0.1s">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=85" alt="Dr. Rafael Torres" loading="lazy">
+          <div class="team-overlay">
+            <p>Ortodontista certificado em Invisalign, referência em alinhamento invisible e estética ortodôntica de precisão.</p>
+            <a href="#agendamento" class="btn btn-sm btn-outline-white">Agendar consulta</a>
+          </div>
+        </div>
+        <div class="team-info">
+          <h4>Dr. Rafael Torres</h4>
+          <span class="team-spec">Ortodontia e Invisalign</span>
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card reveal" style="--rd:0.2s">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=500&q=85" alt="Dra. Camila Vieira" loading="lazy">
+          <div class="team-overlay">
+            <p>Pioneira em lentes de contato dental ultrafinas. Cria sorrisos naturais e personalizados com planejamento digital.</p>
+            <a href="#agendamento" class="btn btn-sm btn-outline-white">Agendar consulta</a>
+          </div>
+        </div>
+        <div class="team-info">
+          <h4>Dra. Camila Vieira</h4>
+          <span class="team-spec">Estética Dental e Lentes de Contato</span>
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card reveal" style="--rd:0.3s">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=85" alt="Dra. Beatriz Nunes" loading="lazy">
+          <div class="team-overlay">
+            <p>Especialista em endodontia de alta precisão com microscópio cirúrgico. Atua também na clínica geral com visão integral do paciente.</p>
+            <a href="#agendamento" class="btn btn-sm btn-outline-white">Agendar consulta</a>
+          </div>
+        </div>
+        <div class="team-info">
+          <h4>Dra. Beatriz Nunes</h4>
+          <span class="team-spec">Endodontia e Clínica Geral</span>
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== TECNOLOGIA ===== -->
+<section id="tecnologia" class="tech section-pad">
+  <div class="tech-bg"></div>
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label section-label--light">Nossa Tecnologia</div>
+      <h2 class="text-white">Tecnologia digital para diagnósticos mais precisos e <span class="cyan-text">tratamentos mais previsíveis</span>.</h2>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card reveal" style="--rd:0s">
+        <div class="tech-card-icon"><i class="fas fa-scanner"></i><i class="fas fa-search-plus" style="display:none"></i><i class="fas fa-qrcode"></i></div>
+        <h4>Escaneamento Intraoral</h4>
+        <p>Moldagem digital com scanner 3D de alta precisão, eliminando a necessidade de moldagens convencionais.</p>
+      </div>
+      <div class="tech-card reveal" style="--rd:0.08s">
+        <div class="tech-card-icon"><i class="fas fa-cube"></i></div>
+        <h4>Planejamento 3D</h4>
+        <p>Visualização completa do tratamento antes de começar, com software odontológico de última geração.</p>
+      </div>
+      <div class="tech-card reveal" style="--rd:0.16s">
+        <div class="tech-card-icon"><i class="fas fa-radiation-alt"></i></div>
+        <h4>Radiografia Digital</h4>
+        <p>Imagens de alta resolução com exposição mínima à radiação para diagnósticos mais seguros.</p>
+      </div>
+      <div class="tech-card reveal" style="--rd:0.24s">
+        <div class="tech-card-icon"><i class="fas fa-desktop"></i></div>
+        <h4>Simulação Estética</h4>
+        <p>Veja o resultado do seu sorriso antes de começar o tratamento com simulação digital personalizada.</p>
+      </div>
+      <div class="tech-card reveal" style="--rd:0.32s">
+        <div class="tech-card-icon"><i class="fas fa-crosshairs"></i></div>
+        <h4>Cirurgia Guiada</h4>
+        <p>Implantes com posicionamento milimétrico através de guias cirúrgicos planejados digitalmente.</p>
+      </div>
+      <div class="tech-card reveal" style="--rd:0.40s">
+        <div class="tech-card-icon"><i class="fas fa-shield-virus"></i></div>
+        <h4>Biossegurança Avançada</h4>
+        <p>Protocolos modernos de esterilização com autoclave de última geração e monitoramento contínuo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRATAMENTOS ===== -->
+<section id="tratamentos" class="treatments section-pad bg-offwhite">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Tratamentos</div>
+      <h2>Tratamentos odontológicos <span class="gradient-text">completos</span> em um só lugar.</h2>
+    </div>
+
+    <!-- Counters -->
+    <div class="counters-row reveal">
+      <div class="counter-item">
+        <span class="counter-num" data-target="15">0</span><span class="counter-suffix"> anos</span>
+        <p>De experiência</p>
+      </div>
+      <div class="counter-item">
+        <span class="counter-prefix">+</span><span class="counter-num" data-target="3000">0</span>
+        <p>Pacientes satisfeitos</p>
+      </div>
+      <div class="counter-item">
+        <span class="counter-prefix">+</span><span class="counter-num" data-target="12">0</span>
+        <p>Especialistas</p>
+      </div>
+      <div class="counter-item">
+        <span class="counter-prefix">+</span><span class="counter-num" data-target="8">0</span>
+        <p>Áreas de tratamento</p>
+      </div>
+    </div>
+
+    <div class="treatments-grid">
+      <div class="treat-card reveal" style="--rd:0s" data-href="#agendamento">
+        <div class="treat-icon"><i class="fas fa-tooth"></i></div>
+        <h4>Implante Dentário</h4>
+        <p>Substituição permanente de dentes ausentes com titânio de alta qualidade e osseointegração previsível.</p>
+        <a href="#agendamento" class="treat-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="treat-card reveal" style="--rd:0.06s">
+        <div class="treat-icon"><i class="fas fa-sparkles" style="display:none"></i><i class="fas fa-star"></i></div>
+        <h4>Lente de Contato Dental</h4>
+        <p>Facetas ultrafinas de porcelana que transformam o sorriso com mínimo desgaste dental.</p>
+        <a href="#agendamento" class="treat-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="treat-card reveal" style="--rd:0.12s">
+        <div class="treat-icon"><i class="fas fa-gem"></i></div>
+        <h4>Faceta de Porcelana</h4>
+        <p>Cerâmicas de alta estética que corrigem forma, cor e tamanho dos dentes com resultado natural.</p>
+        <a href="#agendamento" class="treat-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="treat-card reveal" style="--rd:0.18s">
+        <div class="treat-icon"><i class="fas fa-sun"></i></div>
+        <h4>Clareamento Dental</h4>
+        <p>Técnicas seguras e eficazes para clareamento em consultório ou home care com resultado duradouro.</p>
+        <a href="#agendamento" class="treat-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="treat-card reveal" style="--rd:0.24s">
+        <div class="treat-icon"><i class="fas fa-align-center"></i></div>
+        <h4>Ortodontia Estética</h4>
+        <p>Aparelhos estéticos em safira ou cerâmica para alinhamento com discrição e eficácia.</p>
+        <a href="#agendamento" class="treat-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="treat-card reveal" style="--rd:0.30s">
+        <div class="treat-icon"><i class="fas fa-layer-group"></i></div>
+        <h4>Invisalign</h4>
+        <p>Alinhadores transparentes removíveis para correção dental com máximo conforto e invisibilidade.</p>
+        <a href="#agendamento" class="treat-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="treat-card reveal" style="--rd:0.36s">
+        <div class="treat-icon"><i class="fas fa-teeth"></i></div>
+        <h4>Protocolo Dentário</h4>
+        <p>Reabilitação total da arcada com próteses fixas sobre implantes para devolver função e estética.</p>
+        <a href="#agendamento" class="treat-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="treat-card reveal" style="--rd:0.42s">
+        <div class="treat-icon"><i class="fas fa-bacterium" style="display:none"></i><i class="fas fa-band-aid"></i></div>
+        <h4>Tratamento de Gengivite</h4>
+        <p>Diagnóstico e tratamento periodontal com tecnologia a laser e acompanhamento especializado.</p>
+        <a href="#agendamento" class="treat-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="treat-card reveal" style="--rd:0.48s">
+        <div class="treat-icon"><i class="fas fa-syringe"></i></div>
+        <h4>Endodontia</h4>
+        <p>Tratamento de canal com localização eletrônica e microscópio cirúrgico para máxima precisão.</p>
+        <a href="#agendamento" class="treat-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="treat-card reveal" style="--rd:0.54s">
+        <div class="treat-icon"><i class="fas fa-scalpel" style="display:none"></i><i class="fas fa-cut"></i></div>
+        <h4>Cirurgia de Siso</h4>
+        <p>Exodontia de sisos com planejamento radiográfico 3D e sedação para maior conforto.</p>
+        <a href="#agendamento" class="treat-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="treat-card reveal" style="--rd:0.60s">
+        <div class="treat-icon"><i class="fas fa-head-side-mask" style="display:none"></i><i class="fas fa-brain"></i></div>
+        <h4>DTM</h4>
+        <p>Tratamento de disfunção temporomandibular com placa oclusal e fisioterapia especializada.</p>
+        <a href="#agendamento" class="treat-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="treat-card reveal" style="--rd:0.66s">
+        <div class="treat-icon"><i class="fas fa-fill-drip"></i></div>
+        <h4>Dentística Restauradora</h4>
+        <p>Restaurações com resinas e cerâmicas de alta estética que imitam perfeitamente o dente natural.</p>
+        <a href="#agendamento" class="treat-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULTADOS ===== -->
+<section id="resultados" class="results section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Resultados</div>
+      <h2>Resultados que devolvem <span class="gradient-text">confiança ao sorrir</span>.</h2>
+      <p>Veja exemplos ilustrativos de transformações realizadas com planejamento, estética e cuidado em cada detalhe.</p>
+    </div>
+
+    <div class="results-tabs reveal">
+      <button class="rtab active" data-filter="all">Todos</button>
+      <button class="rtab" data-filter="antes-depois">Antes e depois</button>
+      <button class="rtab" data-filter="protocolo">Protocolo dentário</button>
+      <button class="rtab" data-filter="lentes">Lentes e facetas</button>
+      <button class="rtab" data-filter="clareamento">Clareamento</button>
+      <button class="rtab" data-filter="ortodontia">Ortodontia</button>
+    </div>
+
+    <div class="results-gallery" id="resultsGallery">
+      <div class="rg-item" data-category="lentes antes-depois" data-modal-title="Lentes de Contato Dental" data-modal-desc="Transformação completa com lentes ultrafinas. Correção de forma, cor e alinhamento aparente em 2 sessões.">
+        <img src="https://images.unsplash.com/photo-1502767089025-6572583495b9?auto=format&fit=crop&w=600&q=80" alt="Resultado lentes dentais" loading="lazy">
+        <div class="rg-overlay"><span class="rg-tag">Lentes de Contato</span><button class="rg-view"><i class="fas fa-expand-alt"></i></button></div>
+      </div>
+      <div class="rg-item" data-category="clareamento antes-depois" data-modal-title="Clareamento Dental" data-modal-desc="Clareamento a laser em consultório com resultado de até 8 tons mais claro em uma sessão de 90 minutos.">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80" alt="Resultado clareamento" loading="lazy">
+        <div class="rg-overlay"><span class="rg-tag">Clareamento</span><button class="rg-view"><i class="fas fa-expand-alt"></i></button></div>
+      </div>
+      <div class="rg-item" data-category="protocolo antes-depois" data-modal-title="Protocolo Dentário" data-modal-desc="Reabilitação total com protocolo All-on-4. Devolvemos função mastigatória e estética em tempo reduzido.">
+        <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=600&q=80" alt="Resultado protocolo" loading="lazy">
+        <div class="rg-overlay"><span class="rg-tag">Protocolo Dentário</span><button class="rg-view"><i class="fas fa-expand-alt"></i></button></div>
+      </div>
+      <div class="rg-item" data-category="ortodontia" data-modal-title="Ortodontia com Invisalign" data-modal-desc="Alinhamento completo em 18 meses com alinhadores transparentes Invisalign. Sem desconforto, sem estética comprometida.">
+        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=80" alt="Resultado ortodontia" loading="lazy">
+        <div class="rg-overlay"><span class="rg-tag">Invisalign</span><button class="rg-view"><i class="fas fa-expand-alt"></i></button></div>
+      </div>
+      <div class="rg-item" data-category="lentes antes-depois" data-modal-title="Facetas de Porcelana" data-modal-desc="8 facetas de porcelana ultra-estéticas. Correção de diastemas, forma e cor com resultado extremamente natural.">
+        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=600&q=80" alt="Resultado facetas" loading="lazy">
+        <div class="rg-overlay"><span class="rg-tag">Facetas de Porcelana</span><button class="rg-view"><i class="fas fa-expand-alt"></i></button></div>
+      </div>
+      <div class="rg-item" data-category="clareamento ortodontia" data-modal-title="Transformação Completa" data-modal-desc="Combinação de clareamento + lentes para resultado holístico. Planejamento digital garantindo harmonia perfeita.">
+        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=600&q=80" alt="Resultado completo" loading="lazy">
+        <div class="rg-overlay"><span class="rg-tag">Transformação Completa</span><button class="rg-view"><i class="fas fa-expand-alt"></i></button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROVAS SOCIAIS ===== -->
+<section class="proof section-pad bg-offwhite">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>Por que pacientes escolhem a <span class="gradient-text">Prime Dental Concept</span>?</h2>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-card reveal" style="--rd:0s"><div class="proof-num">+3.000</div><div class="proof-lbl">Pacientes Atendidos</div></div>
+      <div class="proof-card reveal" style="--rd:0.08s"><div class="proof-num">15 anos</div><div class="proof-lbl">De Experiência</div></div>
+      <div class="proof-card reveal" style="--rd:0.16s"><div class="proof-num">+12</div><div class="proof-lbl">Especialistas</div></div>
+      <div class="proof-card reveal" style="--rd:0.24s"><div class="proof-num">98%</div><div class="proof-lbl">Satisfação dos Pacientes</div></div>
+    </div>
+    <div class="seals-row reveal">
+      <div class="seal"><i class="fas fa-certificate"></i><span>Clínica Referência em Estética Dental</span></div>
+      <div class="seal"><i class="fas fa-award"></i><span>Atendimento Premium</span></div>
+      <div class="seal"><i class="fas fa-cube"></i><span>Planejamento Digital</span></div>
+      <div class="seal"><i class="fas fa-star"></i><span>Excelência em Experiência</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DEPOIMENTOS ===== -->
+<section id="depoimentos" class="testimonials section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Depoimentos</div>
+      <h2>Histórias de pacientes que voltaram a <span class="gradient-text">sorrir com confiança</span>.</h2>
+    </div>
+    <div class="tcarousel-wrap reveal">
+      <div class="tcarousel" id="tcarousel">
+        <div class="tcard">
+          <div class="tcard-stars">★★★★★</div>
+          <p class="tcard-text">"Desde a primeira consulta me senti completamente segura. O atendimento foi impecável e o resultado superou todas as minhas expectativas. Meu sorriso mudou minha vida."</p>
+          <div class="tcard-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80" alt="Ana Luiza" loading="lazy">
+            <div><strong>Ana Luiza</strong><span>Lentes de Contato Dental</span></div>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-stars">★★★★★</div>
+          <p class="tcard-text">"Fiz meu tratamento com implantes e todo o processo foi muito bem explicado, sem surpresas. A equipe é extremamente profissional e atenciosa em cada etapa."</p>
+          <div class="tcard-author">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&h=100&q=80" alt="Roberto Martins" loading="lazy">
+            <div><strong>Roberto Martins</strong><span>Implante Dentário</span></div>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-stars">★★★★★</div>
+          <p class="tcard-text">"As lentes ficaram absolutamente naturais e mudaram completamente minha autoestima. Hoje sorrio sem medo e sem vergonha. Recomendo muito a Prime Dental!"</p>
+          <div class="tcard-author">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100&q=80" alt="Camila Rocha" loading="lazy">
+            <div><strong>Camila Rocha</strong><span>Lentes de Contato</span></div>
+          </div>
+        </div>
+        <div class="tcard">
+          <div class="tcard-stars">★★★★★</div>
+          <p class="tcard-text">"Eu tinha muito medo de dentista, mas fui acolhido com muita paciência e cuidado desde o início. A experiência foi completamente diferente do que eu imaginava. Obrigado!"</p>
+          <div class="tcard-author">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100&q=80" alt="Felipe Andrade" loading="lazy">
+            <div><strong>Felipe Andrade</strong><span>Clínica Geral</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="tcarousel-controls">
+        <button class="tc-prev" id="tcPrev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+        <div class="tc-dots" id="tcDots"></div>
+        <button class="tc-next" id="tcNext" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AGENDAMENTO ===== -->
+<section id="agendamento" class="scheduling section-pad">
+  <div class="scheduling-bg"></div>
+  <div class="container">
+    <div class="scheduling-grid">
+
+      <div class="sched-info reveal">
+        <div class="section-label section-label--light">Agende sua Consulta</div>
+        <h2 class="text-white">Agende sua <span class="cyan-text">avaliação odontológica</span>.</h2>
+        <p class="text-white-70">Preencha seus dados e fale diretamente com nossa equipe pelo WhatsApp para encontrar o melhor horário.</p>
+        <div class="sched-contacts">
+          <div class="sched-contact-item"><i class="fab fa-whatsapp"></i><div><strong>WhatsApp</strong><span>(00) 00000-0000</span></div></div>
+          <div class="sched-contact-item"><i class="fas fa-phone"></i><div><strong>Telefone</strong><span>(00) 0000-0000</span></div></div>
+          <div class="sched-contact-item"><i class="fas fa-envelope"></i><div><strong>E-mail</strong><span>contato@primedentalconcept.com.br</span></div></div>
+          <div class="sched-contact-item"><i class="fas fa-clock"></i><div><strong>Horário</strong><span>Seg–Sex: 8h–20h | Sáb: 8h–14h</span></div></div>
+        </div>
+      </div>
+
+      <div class="sched-form-wrap reveal">
+        <form id="whatsappForm" class="sched-form" novalidate>
+          <div class="form-group">
+            <label for="fname">Seu nome *</label>
+            <input type="text" id="fname" name="nome" placeholder="Como podemos te chamar?" required>
+          </div>
+          <div class="form-group">
+            <label for="fphone">Telefone / WhatsApp *</label>
+            <input type="tel" id="fphone" name="telefone" placeholder="(00) 00000-0000" required>
+          </div>
+          <div class="form-group">
+            <label for="ftreat">Tratamento de interesse</label>
+            <select id="ftreat" name="tratamento">
+              <option value="">Selecione um tratamento</option>
+              <option>Implante Dentário</option>
+              <option>Lente de Contato Dental</option>
+              <option>Faceta de Porcelana</option>
+              <option>Clareamento Dental</option>
+              <option>Ortodontia / Invisalign</option>
+              <option>Protocolo Dentário</option>
+              <option>Endodontia</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fmsg">Mensagem opcional</label>
+            <textarea id="fmsg" name="mensagem" rows="3" placeholder="Conte um pouco sobre seu caso..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-whatsapp btn-lg btn-block">
+            <i class="fab fa-whatsapp"></i> Enviar pelo WhatsApp
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="duvidas" class="faq section-pad bg-offwhite">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Dúvidas Frequentes</div>
+      <h2>Perguntas que nossos <span class="gradient-text">pacientes costumam fazer</span>.</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">A avaliação é gratuita? <i class="fas fa-plus"></i></button>
+        <div class="faq-a"><p>Sim! Na Prime Dental Concept oferecemos uma avaliação inicial gratuita com nosso especialista para entender seu caso e apresentar as melhores opções de tratamento sem compromisso.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quais formas de pagamento são aceitas? <i class="fas fa-plus"></i></button>
+        <div class="faq-a"><p>Aceitamos cartão de crédito em até 18x sem juros, débito, PIX, dinheiro e diversas opções de financiamento odontológico. Trabalhamos para que o investimento no seu sorriso caiba no seu bolso.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Implante dentário dói? <i class="fas fa-plus"></i></button>
+        <div class="faq-a"><p>O procedimento de implante é realizado sob anestesia local e, quando necessário, com sedação. A grande maioria dos nossos pacientes relata muito pouco desconforto durante o procedimento. No pós-operatório, a equipe orienta o uso de medicamentos adequados.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quanto tempo dura o tratamento com lentes de contato dental? <i class="fas fa-plus"></i></button>
+        <div class="faq-a"><p>Em geral, o tratamento com lentes de contato dental é concluído em 2 a 3 semanas, incluindo o planejamento digital, confecção e instalação. O resultado, quando bem cuidado, pode durar mais de 15 anos.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Vocês atendem pacientes com medo de dentista? <i class="fas fa-plus"></i></button>
+        <div class="faq-a"><p>Absolutamente. Temos protocolos específicos para pacientes com dentofobia, incluindo sedação oral, atendimento gradual e equipe treinada para um acolhimento diferenciado. Muitos de nossos pacientes mais fiéis chegaram com muito medo.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Posso agendar pelo WhatsApp? <i class="fas fa-plus"></i></button>
+        <div class="faq-a"><p>Sim! O WhatsApp é nosso principal canal de agendamento. Nossa equipe responde rapidamente, de segunda a sábado. Basta clicar no botão de agendamento nesta página e será direcionado diretamente para o nosso atendimento.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">A clínica trabalha com Invisalign? <i class="fas fa-plus"></i></button>
+        <div class="faq-a"><p>Sim! Somos clínica credenciada Invisalign com especialista certificado. Realizamos o planejamento digital completo do seu caso e acompanhamos cada fase do tratamento de alinhamento com alinhadores transparentes.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">O tratamento é personalizado? <i class="fas fa-plus"></i></button>
+        <div class="faq-a"><p>Sempre. Na Prime Dental Concept não existe tratamento padrão. Cada caso é planejado individualmente, considerando a anatomia, estética, função e expectativas de cada paciente. Seu sorriso é único e merece um plano único.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MÍDIA / BLOG / TURISMO ===== -->
+<section id="midia" class="media section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>Conteúdo e <span class="gradient-text">Presença Institucional</span></h2>
+    </div>
+    <div class="media-grid">
+      <div class="media-card reveal" style="--rd:0s" id="blog">
+        <div class="media-card-icon"><i class="fas fa-newspaper"></i></div>
+        <div class="media-card-tag">Na Mídia</div>
+        <h4>Prime Dental Concept é destaque em atendimento odontológico premium</h4>
+        <p>Nossa clínica foi reconhecida por veículos especializados como referência em tecnologia e humanização na odontologia.</p>
+        <a href="#" class="btn btn-outline-primary btn-sm">Ver mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="media-card reveal" style="--rd:0.12s">
+        <div class="media-card-icon"><i class="fas fa-pen-nib"></i></div>
+        <div class="media-card-tag">Blog</div>
+        <h4>Conteúdos sobre estética, saúde bucal e tecnologia odontológica</h4>
+        <p>Artigos, dicas e novidades sobre como cuidar do seu sorriso com as mais modernas técnicas e tendências.</p>
+        <a href="#" class="btn btn-outline-primary btn-sm">Ver mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="media-card reveal" style="--rd:0.24s" id="turismo">
+        <div class="media-card-icon"><i class="fas fa-plane"></i></div>
+        <div class="media-card-tag">Dental Turismo</div>
+        <h4>Atendimento para pacientes de outras cidades com planejamento completo</h4>
+        <p>Estrutura completa para quem viaja de longe: agendamento integrado, orientações de hospedagem e suporte dedicado.</p>
+        <a href="#agendamento" class="btn btn-outline-primary btn-sm">Saiba mais <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOCALIZAÇÃO ===== -->
+<section class="location section-pad bg-offwhite">
+  <div class="container">
+    <div class="location-grid">
+      <div class="location-info reveal">
+        <div class="section-label">Localização</div>
+        <h2>Estamos prontos para <span class="gradient-text">receber você</span>.</h2>
+        <div class="loc-detail"><i class="fas fa-map-marker-alt"></i><div><strong>Endereço</strong><span>Av. Atlântica, 1500 — Sala 1201<br>Copacabana, Rio de Janeiro — RJ</span></div></div>
+        <div class="loc-detail"><i class="fab fa-whatsapp"></i><div><strong>WhatsApp</strong><span>(00) 00000-0000</span></div></div>
+        <div class="loc-detail"><i class="fas fa-phone"></i><div><strong>Telefone</strong><span>(00) 0000-0000</span></div></div>
+        <div class="loc-detail"><i class="fas fa-envelope"></i><div><strong>E-mail</strong><span>contato@primedentalconcept.com.br</span></div></div>
+        <div class="loc-detail"><i class="fas fa-clock"></i><div><strong>Horário</strong><span>Seg–Sex: 8h às 20h<br>Sábado: 8h às 14h</span></div></div>
+        <div class="loc-detail"><i class="fas fa-car"></i><div><strong>Estacionamento</strong><span>Estacionamento conveniado a 50m</span></div></div>
+        <a href="https://www.google.com/maps/search/Av.+Atlântica,+1500,+Rio+de+Janeiro" target="_blank" class="btn btn-primary mt-1">
+          <i class="fas fa-map-marker-alt"></i> Abrir rota no Google Maps
+        </a>
+      </div>
+      <div class="location-map reveal">
+        <div class="map-placeholder">
+          <div class="map-inner">
+            <i class="fas fa-map-marker-alt"></i>
+            <p><strong>Prime Dental Concept</strong></p>
+            <p>Av. Atlântica, 1500 — Sala 1201<br>Rio de Janeiro — RJ</p>
+            <a href="https://www.google.com/maps/search/Av.+Atlântica,+1500,+Rio+de+Janeiro" target="_blank" class="btn btn-primary btn-sm">Ver no mapa</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            <svg viewBox="0 0 36 42" fill="none" width="32" height="37">
+              <path d="M18 2C11 2 5 7 5 14C5 17 6 20 8 23C10 27 12 31 13 35C14 38 15 41 16.5 41C18 41 18.5 37 19 33C19.3 31 19.5 29 18 29C16.5 29 16.7 31 17 33C17.5 37 18 41 19.5 41C21 41 22 38 23 35C24 31 26 27 28 23C30 20 31 17 31 14C31 7 25 2 18 2Z" fill="url(#ftGrad)"/>
+              <defs><linearGradient id="ftGrad" x1="5" y1="2" x2="31" y2="41" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#A7F3FF"/><stop offset="100%" stop-color="#38BDF8"/></linearGradient></defs>
+            </svg>
+            <span><span class="fp">Prime</span> Dental Concept</span>
+          </div>
+          <p>Odontologia premium com tecnologia digital, atendimento humanizado e especialistas em estética dental.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Contato</h5>
+          <ul>
+            <li><i class="fab fa-whatsapp"></i> (00) 00000-0000</li>
+            <li><i class="fas fa-phone"></i> (00) 0000-0000</li>
+            <li><i class="fas fa-envelope"></i> contato@primedentalconcept.com.br</li>
+            <li><i class="fas fa-clock"></i> Seg–Sex: 8h–20h | Sáb: 8h–14h</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Nossa Clínica</h5>
+          <ul>
+            <li><a href="#sobre">Sobre nós</a></li>
+            <li><a href="#tecnologia">Tecnologia</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#duvidas">Dúvidas</a></li>
+            <li><a href="#midia">Na Mídia</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Tratamentos</h5>
+          <ul>
+            <li><a href="#tratamentos">Implantes</a></li>
+            <li><a href="#tratamentos">Lentes de Contato</a></li>
+            <li><a href="#tratamentos">Clareamento</a></li>
+            <li><a href="#tratamentos">Ortodontia</a></li>
+            <li><a href="#tratamentos">Invisalign</a></li>
+            <li><a href="#tratamentos">Protocolo Dentário</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Certificações</h5>
+          <div class="footer-seals">
+            <div class="fseal"><i class="fas fa-certificate"></i><span>Clínica Referência em Estética</span></div>
+            <div class="fseal"><i class="fas fa-award"></i><span>Atendimento Premium</span></div>
+            <div class="fseal"><i class="fas fa-cube"></i><span>Planejamento Digital</span></div>
+            <div class="fseal"><i class="fas fa-star"></i><span>Excelência no Atendimento</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 Prime Dental Concept. Todos os direitos reservados.</p>
+      <p>Desenvolvido com tecnologia e cuidado para o seu sorriso.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== WHATSAPP FLOAT ===== -->
+<div class="wapp-float" id="wappFloat">
+  <div class="wapp-tooltip" id="wappTooltip">
+    <p>Precisa de ajuda? Fale com nossa equipe. 😊</p>
+    <button class="wapp-close-tip" id="wappCloseTip" aria-label="Fechar">✕</button>
+  </div>
+  <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20informações%20sobre%20os%20tratamentos%20da%20Prime%20Dental%20Concept." target="_blank" class="wapp-btn" aria-label="Abrir WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <div class="wapp-pulse"></div>
+  </a>
+</div>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box" id="modalBox">
+    <button class="modal-close" id="modalClose" aria-label="Fechar"><i class="fas fa-times"></i></button>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
